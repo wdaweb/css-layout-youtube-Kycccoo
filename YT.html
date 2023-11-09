@@ -1,0 +1,649 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YouTube</title>
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/reset.css">
+    <style>
+        body {
+            background: #ffffff;
+            margin: 0;
+        }
+
+        .top {
+            /* background: gray; */
+            width: 100%;
+            height: 80px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1;
+            background: white;
+        }
+
+        .top .menu {
+            position: absolute;
+            left: 2%;
+            top: 40px;
+        }
+
+
+        .top .logo img {
+            position: absolute;
+            left: 3%;
+            width: 120px;
+            height: 80%;
+            top: 15px
+        }
+
+        .top .search {
+            position: absolute;
+            left: 32%;
+            top: 20%;
+            width: 31.5%;
+            height: 50%;
+        }
+
+        .top .search input {
+            width: 100%;
+            height: 100%;
+            border-radius: 100px 0 0 100px;
+            border: 0.5px solid gray;
+            font-size: 16px;
+            color: gray;
+        }
+
+        .top .button {
+            position: absolute;
+            left: 61.5%;
+            top: 20%;
+            width: 4%;
+            height: 50%;
+        }
+
+
+        .top .button input {
+            width: 100%;
+            height: 100%;
+            border-radius: 0 100px 100px 0;
+            border: 0.5px solid gray;
+            cursor: pointer;
+        }
+
+
+        .top .a {
+            position: absolute;
+            left: 61.5%;
+            top: 21%;
+            cursor: pointer;
+            width: 4%;
+            height: 48%;
+            text-align: center;
+            line-height: 40px;
+        }
+
+        .top .a:hover {
+            background: rgba(0, 0, 0, 0.1);
+            border-radius: 0 100px 100px 0;
+            box-shadow: 0.5px 0.5px 2 px -2px rgba(20%, 20%, 40%, 0.5);
+        }
+
+        .top .b {
+            position: absolute;
+            right: 0;
+            top: 10%;
+            width: 150px;
+        }
+
+        .top .b img {
+            width: 20%;
+            height: 50%;
+            border-radius: 50%;
+            margin-top: 5px;
+        }
+
+        .left {
+            /*  view port height*/
+            height: calc(100vh - 80px);
+            background: white;
+            width: 15%;
+            position: fixed;
+            left: 0;
+            top: 80px;
+            overflow-y: auto;
+        }
+
+        .right {
+            width: calc(100% - 16%);
+            margin-left: 15%;
+            background: white;
+            margin-top: 80px;
+        }
+
+        .L {
+            width: 90%;
+            height: 40px;
+            /* border: 1px solid black; */
+            margin-left: 10%;
+        }
+
+        .L i {
+            font-size: 24px;
+            width: 20%;
+            text-align: center;
+            line-height: 50px;
+        }
+
+        .L span {
+            font-family: "微軟正黑體";
+            font-size: 16px;
+        }
+
+        .righttop {
+            width: 100%;
+            height: 30px;
+            background-color: white;
+            margin-left: 20px;
+        }
+
+        .righttop li {
+            display: inline-block;
+            background: #e7e7e7;
+            margin-top: 5px;
+            color: #4f4f4f;
+            border-radius: 15%;
+            padding: 8px;
+            margin-right: 5px;
+        }
+
+        .rightcontent {
+            margin-top: 30px;
+            margin-left: 20px;
+        }
+
+        .card {
+            width: 19%;
+            height: 260px;
+            overflow: auto;
+            float: left;
+            margin-right: 1%;
+        }
+
+        .rightcontent .img {
+            width: 100%;
+            border-radius: 5%;
+        }
+
+        .imgg {
+            width: 100%;
+            height: 70px;
+            margin-top: 10px;
+            float: left;
+        }
+
+        .imgg img {
+            width: 50px;
+            height: 50;
+            border-radius: 50%;
+            float: left;
+            margin-right: 10px;
+        }
+
+        .imgg .a {
+            height: 100%;
+            width: 70%;
+
+            font-size: 14px;
+            font-family: '微軟正黑體';
+            color: #7e7c7c;
+            float: left;
+        }
+
+        .b {
+            width: 19%;
+            height: 60px;
+            float: left;
+        }
+    </style>
+
+</head>
+
+<body>
+    <div>
+        <div class="top">
+            <div class="menu"><i class="fa-solid fa-bars"></i></div>
+            <div class="logo"><img src=" ./images/小圖/youtube.png">
+            </div>
+            <div class="search"><input type="search" value="搜尋"></div>
+            <div class="button"><input type="submit" value="">
+            </div>
+            <div class="a"><i class="fa-solid fa-magnifying-glass"></i></div>
+            <div class="b">
+                <i class="fa-solid fa-video"></i>
+                <span>&nbsp;&nbsp;</span>
+                <i class="fa-regular fa-bell"></i>
+                <span>&nbsp;&nbsp;</span>
+                <span><img src="./images/小圖/unnamed.jpg"></span>
+            </div>
+        </div>
+        <div class="left">
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>首頁</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>shorts</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>訂閱內容</span>
+            </div>
+            <hr style="width: 90%;">
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>媒體庫</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>觀看紀錄</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>你的影片</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>稍後觀看</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>喜歡的影片</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <hr style="width: 90%;">
+            <div style="margin-top: 10px;margin-left: 20px;">
+                <span>訂閱內容</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <hr style="width: 90%;">
+            <div style="margin-top: 10px;margin-left: 20px;">
+                <span>探索</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <hr style="width: 90%;">
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>瀏覽頻道</span>
+            </div>
+            <hr style="width: 90%;">
+            <div style="margin-top: 10px;margin-left: 20px;">
+                <span>更多 Youtube 功能</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <hr style="width: 90%;">
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <div class="L"><i class="fa-solid fa-house" style="color: #000000;"></i>
+                <span>顯示更多</span>
+            </div>
+            <hr style="width: 90%;">
+            <div style="margin: 20px;font-size: 12px;line-height: 1.5;">
+                <span>簡介 媒體 版權 與我們聯絡<br>
+                    創作者 廣告 開發人員<br>
+                    <br>
+                    條款 隱私權 政策與安全性<br>
+                    YouTube 運作方式 測試新功能<br>
+                    <br>
+                    © 2023 Google LLC</span>
+            </div>
+        </div>
+        <div class="right">
+            <div class="righttop">
+                <ul>
+                    <li>全部</li>
+                    <li>新聞</li>
+                    <li>音樂</li>
+                    <li>直播中</li>
+                    <li>遊戲</li>
+                    <li>籃球</li>
+                    <li>烹飪</li>
+                    <li>卡通</li>
+                    <li>最新上傳</li>
+                </ul>
+            </div>
+            <div class="rightcontent">
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="img" src="./images/大圖/image01.webp" alt="">
+                    <div class="imgg">
+                        <div class="b"> <img src="./images/小圖/img01.jpg" alt="">
+                        </div>
+                        <div class="a">
+                            <div style="color: #1f1e1e;;font-size: 16px;font-weight: bolder;">aaaaaAAAAaaaaaaaaaAAA好嗎
+                            </div>
+                            <span>&nbsp;&nbsp;</span>
+                            <div>叩叩全家</div>
+                            <div>觀看次數:6789次‧10個月前</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>

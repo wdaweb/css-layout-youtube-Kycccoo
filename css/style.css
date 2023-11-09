@@ -1,0 +1,6 @@
+.top > i {
+	/* 將icon當作文字,可使用font-size,color */
+	width: 30px;
+	font: size 1.3rem;
+	color: red;
+}
